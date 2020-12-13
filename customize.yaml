@@ -1,0 +1,101 @@
+sensor.iphone_battery_level:
+  friendly_name: Alexa iPhone Battery Level
+sensor.iphone_battery_state:
+  friendly_name: Alexa iPhone Battery State
+group.all_android_televisions:
+  icon: fas:tv
+group.all_google_home:
+  icon: mdi:google-home
+person.steve:
+  entity_picture: /local/steve_home.jpg
+person.mandy:
+  entity_picture: /local/mandy_home.jpg
+media_player.alexa_s_android_tv:
+  icon: fas:tv
+media_player.alexa_s_bravia_tv:
+  icon: fas:tv
+media_player.bedroom_soundbar:
+  icon: mdi:surround-sound
+media_player.living_room_soundbar:
+  icon: mdi:surround-sound
+switch.alexa_s_bedroom_main_lights:
+  friendly_name: Alexa's Bedroom Main Lights
+light.backdoor_sconces:
+  friendly_name: Backdoor Sconces
+light.basement_stairs_main_lights:
+  friendly_name: Basement Stairs Main Lights
+light.breakfast_area_chandelier:
+  friendly_name: Breakfast Area Chandelier
+light.deck_deck_lights_1:
+  friendly_name: Deck Deck Lights 1
+light.downstairs_bathroom_ceiling_fan_light:
+  friendly_name: Downstairs Bathroom Ceiling Fan Light
+light.downstairs_bathroom_vanity_lights:
+  friendly_name: Downstairs Bathroom Vanity Lights
+light.downstairs_hallway_main_lights:
+  friendly_name: Downstairs Hallway Main Lights
+light.ella_s_bedroom_main_lights:
+  friendly_name: Ella's Bedroom Main Lights
+light.exterior_driveway_light:
+  friendly_name: Exterior Driveway Light
+light.front_foyer_chandelier:
+  friendly_name: Front Foyer Chandelier
+light.front_porch_overhead_light:
+  friendly_name: Front Porch Overhead Light
+light.front_porch_sconces:
+  friendly_name: Front Porch Sconces
+light.deck_deck_lights_2:
+  friendly_name: Deck Deck Lights 2
+light.front_foyer_window_tree:
+  friendly_name: Front Foyer Window Tree
+light.garage_main_lights:
+  friendly_name: Garage Main Lights
+switch.jack_s_bedroom_main_lights:
+  friendly_name: Jack's Bedroom Main Lights
+light.kitchen_island_pendants:
+  friendly_name: Kitchen Island Pendants
+switch.kitchen_main_lights:
+  friendly_name: Kitchen Main Lights
+switch.kitchen_sink_light:
+  friendly_name: Kitchen Sink Light
+light.laundry_room_main_lights:
+  friendly_name: Laundry Room Main Lights
+light.living_room_accent_lights:
+  friendly_name: Living Room Accent Lights
+switch.living_room_ceiling_fan:
+  friendly_name: Living Room Ceiling Fan
+light.master_bathroom_ceiling_fan_light:
+  friendly_name: Master Bathroom Ceiling Fan Light
+light.master_bathroom_main_lights:
+  friendly_name: Master Bathroom Main Lights
+light.master_bathroom_shower:
+  friendly_name: Master Bathroom Shower
+light.master_bathroom_toilet:
+  friendly_name: Master Bathroom Toilet
+light.master_bathroom_vanity_lights:
+  friendly_name: Master Bathroom Vanity Lights
+light.master_bedroom_closet_main_lights:
+  friendly_name: Master Bedroom Closet Main Lights
+light.master_bedroom_accent_lights:
+  friendly_name: Master Bedroom Accent Lights
+light.master_bedroom_ceiling_fan_light:
+  friendly_name: Master Bedroom Ceiling Fan Light
+switch.master_bedroom_ceiling_fan:
+  friendly_name: Master Bedroom Ceiling Fan
+light.playroom_main_lights:
+  friendly_name: Playroom Main Lights
+light.upstairs_bathroom_vanity_lights:
+  friendly_name: Upstairs Bathroom Vanity Lights
+light.upstairs_bathroom_shower_lights:
+  friendly_name: Upstairs Bathroom Shower Lights
+light.upstairs_hallway_main_lights:
+  friendly_name: Upstairs Hallway Main Lights
+media_player.alexa_s_room_speaker:
+  icon: mdi:google-home
+device_tracker.tile_0f4fe874944c47c1:
+  friendly_name: tile harmony remote
+  tile_identifier: harmony_remote
+light.hgrp_0268435422:
+  friendly_name: Jack Hue Lights
+light.hgrp_0004194048:
+  friendly_name: Ella Hue Lights

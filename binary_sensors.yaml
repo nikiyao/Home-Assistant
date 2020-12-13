@@ -1,0 +1,56 @@
+####################################################
+#                                                  #
+#            Binary Sensors - Template             #
+#                                                  #
+####################################################
+  - platform: template
+    sensors:          
+      nikiya_keys_status:
+        friendly_name: Nikiya Keys
+        device_class: connectivity
+        entity_id: device_tracker.tile_ae082240f60af8bb
+        value_template: "{{ is_state('device_tracker.tile_ae082240f60af8bb', 'home') }}"
+        icon_template: >-
+          {% if is_state('device_tracker.tile_ae082240f60af8bb', 'home') %}
+            mdi:key
+          {% elif is_state('device_tracker.tile_ae082240f60af8bb', 'not_home') %}
+            mdi:key-remove
+          {% else %}
+            mdi:alert
+          {% endif %}
+
+  - platform: template
+    sensors:          
+      nikiya_escalade_status:
+        friendly_name: Nikiya Escalade
+        device_class: connectivity
+        entity_id: device_tracker.tile_72b2f8e3808d63b2
+        value_template: "{{ is_state('device_tracker.tile_72b2f8e3808d63b2', 'home') }}"
+        icon_template: >-
+          {% if is_state('device_tracker.tile_72b2f8e3808d63b2', 'home') %}
+            mdi:car-estate
+          {% elif is_state('device_tracker.tile_72b2f8e3808d63b2', 'not_home') %}
+            mdi:car-traction-control
+          {% else %}
+            mdi:alert
+          {% endif %}
+
+  - platform: template
+    sensors:          
+      nikiya_phone_status:
+        friendly_name: Nikiya Phone
+        device_class: connectivity
+        entity_id: device_tracker.tile_p_75443e4ccf2678a0490b7f8229a87598
+        value_template: "{{ is_state('device_tracker.tile_p_75443e4ccf2678a0490b7f8229a87598', 'home') }}"
+        icon_template: >-
+          {% if is_state('device_tracker.tile_p_75443e4ccf2678a0490b7f8229a87598', 'home') %}
+            mdi:cellphone-android
+          {% elif is_state('device_tracker.tile_p_75443e4ccf2678a0490b7f8229a87598', 'not_home') %}
+            mdi-cellphone-arrow-down
+          {% else %}
+            mdi:alert
+          {% endif %}
+
+  - platform: workday
+    country: US
+    excludes: [sat, sun, holiday]

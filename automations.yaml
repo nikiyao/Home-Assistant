@@ -1,0 +1,776 @@
+- id: '1576273360858'
+  alias: Turn Bedroom Soundbar On
+  description: ''
+  trigger:
+  - entity_id: media_player.bedroom_bravia_tv
+    for: 00:00:15
+    platform: state
+    to: 'on'
+  condition:
+  - condition: state
+    entity_id: media_player.bedroom_soundbar
+    state: 'off'
+  action:
+  - entity_id: media_player.bedroom_soundbar
+    service: media_player.turn_on
+- id: '1576273515214'
+  alias: Turn Bedroom Soundbar Off
+  description: ''
+  trigger:
+  - entity_id: media_player.bedroom_bravia_tv
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition:
+  - condition: state
+    entity_id: media_player.bedroom_soundbar
+    state: 'on'
+  action:
+  - entity_id: media_player.bedroom_soundbar
+    service: media_player.turn_off
+- id: '1576273711843'
+  alias: Turn Living Room Soundbar On
+  description: ''
+  trigger:
+  - entity_id: media_player.living_room_bravia_tv
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: state
+    entity_id: media_player.living_room_soundbar
+    state: 'off'
+  action:
+  - entity_id: media_player.living_room_soundbar
+    service: media_player.turn_on
+- id: '1576274076742'
+  alias: Turn Living Room Soundbar To Correct Input
+  description: ''
+  trigger:
+  - entity_id: media_player.living_room_soundbar
+    for: 00:00:10
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      source: TV
+    entity_id: media_player.living_room_soundbar
+    service: media_player.select_source
+- id: '1576274594467'
+  alias: Mark Nikiya As Just Left
+  description: ''
+  trigger:
+  - entity_id: person.nikiya
+    platform: state
+    to: not_home
+  condition: []
+  action:
+  - data:
+      option: Just Left
+    entity_id: input_select.nikiya_status_dropdown
+    service: input_select.select_option
+- id: '1576275573795'
+  alias: Turn On Lights In The Morning
+  description: ''
+  trigger:
+  - at: 06:20:00
+    platform: time
+  condition:
+  - condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: 'on'
+  action:
+  - entity_id: light.kitchen_lights
+    service: light.turn_on
+  - entity_id: light.living_room_lights
+    service: light.turn_on
+  mode: single
+- id: '1576276179859'
+  alias: Turn on Lights Before Sunset
+  description: ''
+  trigger:
+  - event: sunset
+    offset: -02:00:00
+    platform: sun
+  condition: []
+  action:
+  - entity_id: light.entrance_lights
+    service: light.turn_on
+  - entity_id: light.living_room_lights
+    service: light.turn_on
+  - entity_id: light.kitchen_lights
+    service: light.turn_on
+- id: '1576276428810'
+  alias: Mark Nikiya As Away
+  description: ''
+  trigger:
+  - entity_id: sensor.nikiya_status
+    for: 00:15:00
+    platform: state
+    to: Just Left
+  condition: []
+  action:
+  - data:
+      option: Away
+    entity_id: input_select.nikiya_status_dropdown
+    service: input_select.select_option
+- id: '1576276697310'
+  alias: Mark Nikiya As Just Arrived
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: person.nikiya
+    from: not_home
+    to: home
+  action:
+  - service: input_select.select_option
+    data_template:
+      entity_id: input_select.nikiya_status_dropdown
+      option: "{% if  is_state ('states.input_select.nikiya_status_dropdown.state',\
+        \  'Just Left') %}\n Home\n{% else %}\n Just Arrived\n{% endif %} \n"
+- id: '1576276789035'
+  alias: Mark Nikiya As Home
+  description: ''
+  trigger:
+  - entity_id: sensor.nikiya_status
+    for: 00:05:00
+    platform: state
+    to: Just Arrived
+  condition: []
+  action:
+  - data:
+      option: Home
+    entity_id: input_select.nikiya_status_dropdown
+    service: input_select.select_option
+- id: '1576276877775'
+  alias: Close Garage Door When Nikiya Leaves
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_select.nikiya_status_dropdown
+    from: Home
+    to: Just Left
+    for: 00:03:00
+  condition: []
+  action:
+  - entity_id: cover.left_garage
+    service: cover.close_cover
+  mode: single
+- id: '1576276977550'
+  alias: Open Garage Door When Nikiya Gets Home
+  description: ''
+  trigger:
+  - entity_id: input_select.nikiya_status_dropdown
+    platform: state
+    to: Just Arrived
+    for: 00:00:00
+    from: Away
+  condition: []
+  action:
+  - entity_id: cover.left_garage
+    service: cover.open_cover
+  mode: single
+- id: '1576302853808'
+  alias: Mark Amanda As Just Left
+  description: ''
+  trigger:
+  - entity_id: person.amanda
+    for: 00:02:00
+    from: home
+    platform: state
+    to: not_home
+  condition: []
+  action:
+  - data:
+      option: Just Left
+    entity_id: input_select.amanda_status_dropdown
+    service: input_select.select_option
+- id: '1576302933624'
+  alias: Mark Amanda As Away
+  description: ''
+  trigger:
+  - entity_id: sensor.amanda_status
+    for: 00:10:00
+    from: Home
+    platform: state
+    to: Just Left
+  condition: []
+  action:
+  - data:
+      option: Away
+    entity_id: input_select.amanda_status_dropdown
+    service: input_select.select_option
+- id: '1576303080294'
+  alias: Mark Amanda As Just Arrived
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: person.amanda
+    from: not_home
+    to: home
+  action:
+  - service: input_select.select_option
+    data_template:
+      entity_id: input_select.amanda_status_dropdown
+      option: "{% if  is_state ('states.input_select.amanda_status_dropdown.state',\
+        \  'Just Left') %}\n Home\n{% else %}\n Just Arrived\n{% endif %}\n"
+- id: '1576303171598'
+  alias: Mark Amanda As Home
+  description: ''
+  trigger:
+  - entity_id: sensor.amanda_status
+    for: 00:05:00
+    platform: state
+    to: Just Arrived
+  condition: []
+  action:
+  - data:
+      option: Home
+    entity_id: input_select.amanda_status_dropdown
+    service: input_select.select_option
+- id: '1576286760913'
+  alias: Mark Jack As Just Left
+  description: ''
+  trigger:
+  - entity_id: person.jack
+    for: 00:02:00
+    from: home
+    platform: state
+    to: not_home
+  condition: []
+  action:
+  - data:
+      option: Just Left
+    entity_id: input_select.jack_status_dropdown
+    service: input_select.select_option
+- id: '1576286933638'
+  alias: Mark Jack As Away
+  description: ''
+  trigger:
+  - entity_id: sensor.jack_status
+    for: 00:05:00
+    platform: state
+    to: Just Left
+  condition: []
+  action:
+  - data:
+      option: Away
+    entity_id: input_select.jack_status_dropdown
+    service: input_select.select_option
+- id: '1576302606000'
+  alias: Keep The Garage Closed
+  description: ''
+  trigger:
+  - entity_id: group.all_covers
+    for: 00:15:00
+    platform: state
+    to: open
+    from: opening
+  condition: []
+  action:
+  - entity_id: cover.center_garage
+    service: cover.close_cover
+  - data: {}
+    entity_id: cover.left_garage
+    service: cover.close_cover
+  - data: {}
+    entity_id: cover.right_garage
+    service: cover.close_cover
+  mode: single
+- id: '1576345917945'
+  alias: Mark Jack As Just Arrived
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: person.jack
+    from: not_home
+    to: home
+  action:
+  - service: input_select.select_option
+    data_template:
+      entity_id: input_select.jack_status_dropdown
+      option: "{% if  is_state ('states.input_select.jack_status_dropdown.state',\
+        \  'Just Left') %}\n Home\n{% else %}\n Just Arrived\n{% endif %}\n"
+- id: '1576346038821'
+  alias: Mark Jack As Home
+  description: ''
+  trigger:
+  - entity_id: sensor.jack_status
+    for: 00:05:00
+    platform: state
+    to: Just Arrived
+  condition: []
+  action:
+  - data:
+      option: Home
+    entity_id: input_select.jack_status_dropdown
+    service: input_select.select_option
+- id: '1576346209896'
+  alias: Mark Alexa As Just Left
+  description: ''
+  trigger:
+  - entity_id: person.alexa
+    for: 00:02:00
+    from: home
+    platform: state
+    to: not_home
+  condition: []
+  action:
+  - data:
+      option: Just Left
+    entity_id: input_select.alexa_status_dropdown
+    service: input_select.select_option
+- id: '1576346334313'
+  alias: Mark Alexa As Away
+  description: ''
+  trigger:
+  - entity_id: sensor.alexa_status
+    for: 00:05:00
+    platform: state
+    to: Just Left
+  condition: []
+  action:
+  - data:
+      option: Away
+    entity_id: input_select.alexa_status_dropdown
+    service: input_select.select_option
+- id: '1576346416573'
+  alias: Mark Alexa As Just Arrived
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: person.alexa
+    from: not_home
+    to: home
+  action:
+  - service: input_select.select_option
+    data_template:
+      entity_id: input_select.alexa_status_dropdown
+      option: "{% if  is_state ('states.input_select.alexa_status_dropdown.state',\
+        \  'Just Left') %}\n Home\n{% else %}\n Just Arrived\n{% endif %}\n"
+- id: '1576346488236'
+  alias: Mark Alexa As Home
+  description: ''
+  trigger:
+  - entity_id: sensor.alexa_status
+    for: 00:05:00
+    platform: state
+    to: Just Arrived
+  condition: []
+  action:
+  - data:
+      option: Home
+    entity_id: input_select.alexa_status_dropdown
+    service: input_select.select_option
+- id: '1576346934311'
+  alias: Mark Mandy As Just Left
+  description: ''
+  trigger:
+  - entity_id: person.mandy
+    for: 00:02:00
+    from: home
+    platform: state
+    to: not_home
+  condition: []
+  action:
+  - data:
+      option: Just Left
+    entity_id: input_select.mandy_status_dropdown
+    service: input_select.select_option
+- id: '1576347080718'
+  alias: Mark Mandy As Away
+  description: ''
+  trigger:
+  - entity_id: sensor.mandy_status
+    for: 00:05:00
+    platform: state
+    to: Just Left
+  condition: []
+  action:
+  - data:
+      option: Away
+    entity_id: input_select.mandy_status_dropdown
+    service: input_select.select_option
+- id: '1576347492502'
+  alias: Mark Mandy As Just Arrived
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: person.mandy
+    from: not_home
+    to: home
+  action:
+  - service: input_select.select_option
+    data_template:
+      entity_id: input_select.mandy_status_dropdown
+      option: "{% if  is_state ('states.input_select.mandy_status_dropdown.state',\
+        \  'Just Left') %}\n Home\n{% else %}\n Just Arrived\n{% endif %}\n"
+- id: '1576347563548'
+  alias: Mark Mandy As Home
+  description: ''
+  trigger:
+  - entity_id: sensor.mandy_status
+    for: 00:05:00
+    platform: state
+    to: Just Arrived
+  condition: []
+  action:
+  - data:
+      option: Home
+    entity_id: input_select.mandy_status_dropdown
+    service: input_select.select_option
+- id: '1576347669174'
+  alias: Mark Steve As Just Left
+  description: ''
+  trigger:
+  - entity_id: person.steve
+    for: 00:01:00
+    from: home
+    platform: state
+    to: not_home
+  condition: []
+  action:
+  - data:
+      option: Just Left
+    entity_id: input_select.steve_status_dropdown
+    service: input_select.select_option
+- id: '1576347728954'
+  alias: Mark Steve As Away
+  description: ''
+  trigger:
+  - entity_id: sensor.steve_status
+    for: 00:05:00
+    platform: state
+    to: Just Left
+  condition: []
+  action:
+  - data:
+      option: Away
+    entity_id: input_select.steve_status_dropdown
+    service: input_select.select_option
+- id: '1576347797363'
+  alias: Mark Steve As Just Arrived
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: person.steve
+    from: not_home
+    to: home
+  action:
+  - service: input_select.select_option
+    data_template:
+      entity_id: input_select.steve_status_dropdown
+      option: "{% if  is_state ('states.input_select.steve_status_dropdown.state',\
+        \  'Just Left') %}\n Home\n{% else %}\n Just Arrived\n{% endif %} \n"
+- id: '1576347959864'
+  alias: Mark Steve As Home
+  description: ''
+  trigger:
+  - entity_id: sensor.steve_status
+    for: 00:05:00
+    platform: state
+    to: Just Arrived
+  condition: []
+  action:
+  - data:
+      option: Home
+    entity_id: input_select.steve_status_dropdown
+    service: input_select.select_option
+- id: '1576355539583'
+  alias: Mark Nikiya As Away When HA Starts Not Home
+  description: ''
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition:
+  - condition: state
+    entity_id: person.nikiya
+    state: not_home
+  action:
+  - data:
+      option: Away
+    entity_id: input_select.nikiya_status_dropdown
+    service: input_select.select_option
+- id: '1576355661734'
+  alias: Mark Nikiya As Away When HA Starts Unknown
+  description: ''
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition:
+  - condition: state
+    entity_id: person.nikiya
+    state: unknown
+  action:
+  - data:
+      option: Away
+    entity_id: input_select.nikiya_status_dropdown
+    service: input_select.select_option
+- id: '1576355776605'
+  alias: Mark Amanda As Away When HA Starts Not Home
+  description: ''
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition:
+  - condition: state
+    entity_id: person.amanda
+    state: not_home
+  action:
+  - data:
+      option: Away
+    entity_id: input_select.amanda_status_dropdown
+    service: input_select.select_option
+- id: '1576355867698'
+  alias: Mark Amanda As Away When HA Starts Unknown
+  description: ''
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition:
+  - condition: state
+    entity_id: person.amanda
+    state: unknown
+  action:
+  - data:
+      option: Away
+    entity_id: input_select.amanda_status_dropdown
+    service: input_select.select_option
+- id: '1576355965540'
+  alias: Mark Alexa As Away When HA Starts Not Home
+  description: ''
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition:
+  - condition: state
+    entity_id: person.alexa
+    state: not_home
+  action:
+  - data:
+      option: Away
+    entity_id: input_select.alexa_status_dropdown
+    service: input_select.select_option
+- id: '1576356052441'
+  alias: Mark Alexa As Away When HA Starts Unknown
+  description: ''
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition:
+  - condition: state
+    entity_id: person.alexa
+    state: unknown
+  action:
+  - data:
+      option: Away
+    entity_id: input_select.alexa_status_dropdown
+    service: input_select.select_option
+- id: '1576356185960'
+  alias: Mark Jack As Away When HA Starts Not Home
+  description: ''
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition:
+  - condition: state
+    entity_id: person.jack
+    state: not_home
+  action:
+  - data:
+      option: Away
+    entity_id: input_select.jack_status_dropdown
+    service: input_select.select_option
+- id: '1576356374582'
+  alias: Mark Jack As Away When HA Starts Unknown
+  description: ''
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition:
+  - condition: state
+    entity_id: person.jack
+    state: unknown
+  action:
+  - data:
+      option: Away
+    entity_id: input_select.jack_status_dropdown
+    service: input_select.select_option
+- id: '1576356432883'
+  alias: Mark Mandy As Away When HA Starts Not Home
+  description: ''
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition:
+  - condition: state
+    entity_id: person.mandy
+    state: not_home
+  action:
+  - data:
+      option: Away
+    entity_id: input_select.mandy_status_dropdown
+    service: input_select.select_option
+- id: '1576356515419'
+  alias: Mark Mandy As Away When HA Starts Unknown
+  description: ''
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition:
+  - condition: state
+    entity_id: person.mandy
+    state: unknown
+  action:
+  - data:
+      option: Away
+    entity_id: input_select.mandy_status_dropdown
+    service: input_select.select_option
+- id: '1576356569694'
+  alias: Mark Steve As Away When HA Starts Not Home
+  description: ''
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition:
+  - condition: state
+    entity_id: person.steve
+    state: not_home
+  action:
+  - data:
+      option: Away
+    entity_id: input_select.steve_status_dropdown
+    service: input_select.select_option
+- id: '1576356826486'
+  alias: Mark Steve As Away When HA Starts Unknown
+  description: ''
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition:
+  - condition: state
+    entity_id: person.steve
+    state: unknown
+  action:
+  - data:
+      option: Away
+    entity_id: input_select.steve_status_dropdown
+    service: input_select.select_option
+- id: '1590104353648'
+  alias: Dryer is done
+  description: ''
+  trigger:
+  - type: turned_on
+    platform: device
+    device_id: 0fb7f2fcf9fc11eaadff4717294efd63
+    entity_id: binary_sensor.dryer_dry_completed
+    domain: binary_sensor
+  condition: []
+  action:
+  - data:
+      message: the dryer is finished
+    service: notify.mobile_app_amanda_iphone
+  mode: single
+- id: '1590104438214'
+  alias: washer is done
+  description: ''
+  trigger:
+  - type: turned_on
+    platform: device
+    device_id: 0f9a8bdff9fc11ea8ba44fb96f9806c2
+    entity_id: binary_sensor.washer_wash_completed
+    domain: binary_sensor
+  condition: []
+  action:
+  - data:
+      message: The washer is finished
+    service: notify.mobile_app_amanda_iphone
+  mode: single
+- id: '1593825282954'
+  alias: turn off lights
+  description: ''
+  trigger:
+  - at: 05:00:00
+    platform: time
+  condition: []
+  action:
+  - data: {}
+    entity_id: group.all_lights
+    service: homeassistant.turn_off
+- id: '1606969552428'
+  alias: Turn on Christmas Lights
+  description: ''
+  trigger:
+  - platform: time
+    at: '16:00:00'
+  condition: []
+  action:
+  - type: turn_on
+    device_id: c22556b8b9f2ce9d8434d5df325f78d7
+    entity_id: switch.christmas_tree
+    domain: switch
+  - type: turn_on
+    device_id: 3b8b1f74e60a934d1f779f2842a9d2f5
+    entity_id: switch.ella_s_tree
+    domain: switch
+  - type: turn_on
+    device_id: 28deb020af4643b0943d40c6a53ab995
+    entity_id: light.front_foyer_window_tree
+    domain: light
+    brightness_pct: 100
+  - type: turn_on
+    device_id: 5fd15b5c035e5a0e05ee4b27c4c358cd
+    entity_id: switch.garland
+    domain: switch
+  - type: turn_on
+    device_id: e3ba4536b5fbd996c44277477050994c
+    entity_id: switch.banister_lights
+    domain: switch
+  - type: turn_on
+    device_id: 197dcfe8fcd5dde5d1a4342c3aa710e1
+    entity_id: switch.alexa_tree
+    domain: switch
+  - type: turn_on
+    device_id: a904d414f3e20b3be10d0457c94a179a
+    entity_id: switch.locker_tree
+    domain: switch
+  mode: single
+- id: '1606969678928'
+  alias: Turn off Christmas Lights
+  description: ''
+  trigger:
+  - platform: time
+    at: '23:00:00'
+  condition: []
+  action:
+  - type: turn_off
+    device_id: e3ba4536b5fbd996c44277477050994c
+    entity_id: switch.banister_lights
+    domain: switch
+  - type: turn_off
+    device_id: c22556b8b9f2ce9d8434d5df325f78d7
+    entity_id: switch.christmas_tree
+    domain: switch
+  - type: turn_off
+    device_id: 3b8b1f74e60a934d1f779f2842a9d2f5
+    entity_id: switch.ella_s_tree
+    domain: switch
+  - type: turn_off
+    device_id: 28deb020af4643b0943d40c6a53ab995
+    entity_id: light.front_foyer_window_tree
+    domain: light
+  - type: turn_off
+    device_id: 5fd15b5c035e5a0e05ee4b27c4c358cd
+    entity_id: switch.garland
+    domain: switch
+  - type: turn_off
+    device_id: 197dcfe8fcd5dde5d1a4342c3aa710e1
+    entity_id: switch.alexa_tree
+    domain: switch
+  - type: turn_off
+    device_id: a904d414f3e20b3be10d0457c94a179a
+    entity_id: switch.locker_tree
+    domain: switch
+  mode: single

@@ -1,0 +1,43 @@
+  All Android Televisions:
+    entities:
+      - media_player.alexa_s_android_tv
+      - media_player.bedroom_android_tv
+      - media_player.ella_s_android_tv
+      - media_player.jack_s_android_tv
+      - media_player.living_room_android_tv
+  All Google Home:
+    entities:
+      - media_player.alexa_s_room_speaker
+      - media_player.bathroom_speaker
+      - media_player.bedroom_display
+      - media_player.ella_s_room_speaker
+      - media_player.jack_s_room_speaker
+      - media_player.kitchen_home
+      - media_player.living_room_home
+      - media_player.playroom_speaker
+  House Lights:
+    icon: mdi:lightbulb
+    entities:
+      - light.bedtime_lights
+      - light.outside_lights
+      - light.entrance_lights
+      - light.downstairs_lights
+      - light.upstairs_lights
+      - light.upstairs_hallway_main_lights
+      - light.front_foyer_chandelier
+      - light.kitchen_lights
+      - light.breakfast_area_chandelier
+      - light.downstairs_bathroom_lights
+      - light.living_room_lights
+      - light.playroom_main_lights
+      - light.bedroom_lights
+      - light.amanda_s_lamp
+      - light.master_bedroom_closet_main_lights
+      - light.bathroom_lights
+      - light.alexa_s_bedroom_lights
+      - light.jack_s_bedroom_lights
+      - light.ella_s_bedroom_main_lights
+      - light.upstairs_bathroom_lights
+      - light.laundry_room_main_lights
+      - light.garage_main_lights
+      - light.basement_stairs_main_lights

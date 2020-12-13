@@ -1,0 +1,32 @@
+  google_actions:
+    entity_config:
+      cover.left_garage:
+        name: My Garage Door
+        aliases:
+          - Left Garage Door
+          - Escalade Garage Door
+        room: Garage
+      cover.center_garage:
+        name: Van Garage Door
+        aliases:
+          - Center Garage Door
+          - Van Garage Door
+        room: Garage
+      cover.right_garage:
+        name: Mercedes Garage Door
+        aliases:
+          - Right Garage Door
+          - Mercedes Garage Door
+        room: Garage
+      media_player.bedroom_display:
+        name: Bedroom Home
+        aliases:
+          - Bedroom Home Hub
+          - Bedroom Display
+      media_player.alexa_s_room_speaker:
+        name: Alexa's Home
+        aliases:
+          - Alexa's Room Home
+          - Alex's Home
+          - Alexa's Home
+          - Awesome Chicken Gamers Home

@@ -1,0 +1,66 @@
+- id: '1595766579855'
+  name: Bedtime
+  entities:
+    light.alexa_s_bedroom_lights:
+      friendly_name: Alexa's Bedroom Lights
+      state: 'off'
+      supported_features: 0
+    light.backdoor_sconces:
+      device_id: '42'
+      friendly_name: Backdoor Sconces
+      state: 'off'
+      supported_features: 1
+      zone_id: '34'
+    light.basement_stairs_main_lights:
+      device_id: '2'
+      friendly_name: Basement Stairs Main Lights
+      state: 'off'
+      supported_features: 1
+      zone_id: '1'
+    light.bathroom_lights:
+      entity_id:
+      - light.master_bathroom_ceiling_fan_light
+      - light.master_bathroom_main_lights
+      - light.master_bathroom_shower
+      - light.master_bathroom_toilet
+      - light.master_bathroom_vanity_lights
+      friendly_name: Bathroom Lights
+      state: 'off'
+      supported_features: 1
+    light.bedroom_ceiling_fan:
+      friendly_name: Bedroom Ceiling Fan
+      state: 'off'
+      supported_features: 0
+    light.deck_deck_lights_1:
+      device_id: '52'
+      friendly_name: Deck Deck Lights 1
+      state: 'off'
+      supported_features: 1
+      zone_id: '43'
+    light.deck_deck_lights_2:
+      device_id: '53'
+      friendly_name: Deck Deck Lights 2
+      state: 'off'
+      supported_features: 1
+      zone_id: '44'
+    light.downstairs_lights:
+      entity_id:
+      - light.kitchen_island_pendants
+      - light.living_room_accent_lights
+      - light.living_room_lights
+      - light.living_room_ceiling_fan_light
+      - light.breakfast_area_chandelier
+      - light.downstairs_hallway_main_lights
+      - light.kitchen_lights
+      - light.kitchen_sink_light
+      - light.playroom_main_lights
+      friendly_name: Downstairs Lights
+      state: 'off'
+      supported_features: 1
+    light.ella_s_bedroom_main_lights:
+      device_id: '29'
+      friendly_name: Ella's Bedroom Main Lights
+      state: 'off'
+      supported_features: 1
+      zone_id: '21'
+  icon: mdi:bedtime

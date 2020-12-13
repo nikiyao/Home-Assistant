@@ -1,0 +1,104 @@
+  - platform: androidtv
+    name: Bedroom Android TV
+    device_class: androidtv
+    host: 192.168.163.134
+    adb_server_ip: 127.0.0.1
+    apps:
+      com.amazon.amazonvideo.livingroom:  "Amazon Prime Video"
+      com.google.android.youtube.tv:  "YouTube"
+      com.google.android.videos: "Google Play Movies"
+      com.neulion.smartphone.ufc.android: "UFC"
+      com.hulu.livingroomplus: "Hulu"
+      com.android.vending: "Google Play Store"
+      com.mlbam.wwe_asb_app: "WWE"
+      com.google.android.tvlauncher: "Android TV Guide"
+      com.nest.android: "Nest"
+      com.showtime.showtimeanytime: "Showtime"
+      com.nbcuni.nbc.androidtv: "NBC"
+      com.disney.datg.videoplatforms.android.abc: "ABC"
+      com.plexapp.android: "Plex"
+      com.sony.dtv.tvx: "Television"
+  - platform: androidtv
+    name: Ella's Android TV
+    device_class: androidtv
+    host: 192.168.163.160
+    adb_server_ip: 127.0.0.1
+    apps:
+      com.amazon.amazonvideo.livingroom:  "Amazon Prime Video"
+      com.google.android.youtube.tv:  "YouTube"
+      com.google.android.videos: "Google Play Movies"
+      com.neulion.smartphone.ufc.android: "UFC"
+      com.hulu.livingroomplus: "Hulu"
+      com.android.vending: "Google Play Store"
+      com.mlbam.wwe_asb_app: "WWE"
+      com.google.android.tvlauncher: "Android TV Guide"
+      com.nest.android: "Nest"
+      com.showtime.showtimeanytime: "Showtime"
+      com.nbcuni.nbc.androidtv: "NBC"
+      com.disney.datg.videoplatforms.android.abc: "ABC"
+      com.plexapp.android: "Plex"
+      com.sony.dtv.tvx: "Television"
+  - platform: androidtv
+    name: Alexa's Android TV
+    device_class: androidtv
+    host: 192.168.163.193
+    adb_server_ip: 127.0.0.1
+    apps:
+      com.amazon.amazonvideo.livingroom:  "Amazon Prime Video"
+      com.google.android.youtube.tv:  "YouTube"
+      com.google.android.videos: "Google Play Movies"
+      com.neulion.smartphone.ufc.android: "UFC"
+      com.hulu.livingroomplus: "Hulu"
+      com.android.vending: "Google Play Store"
+      com.mlbam.wwe_asb_app: "WWE"
+      com.google.android.tvlauncher: "Android TV Guide"
+      com.nest.android: "Nest"
+      com.showtime.showtimeanytime: "Showtime"
+      com.nbcuni.nbc.androidtv: "NBC"
+      com.disney.datg.videoplatforms.android.abc: "ABC"
+      com.plexapp.android: "Plex"
+      com.sony.dtv.tvx: "Television"
+  - platform: androidtv
+    name: Jack's Android TV
+    device_class: androidtv
+    host: 192.168.163.137
+    adb_server_ip: 127.0.0.1
+    apps:
+      com.amazon.amazonvideo.livingroom:  "Amazon Prime Video"
+      com.google.android.youtube.tv:  "YouTube"
+      com.google.android.videos: "Google Play Movies"
+      com.neulion.smartphone.ufc.android: "UFC"
+      com.hulu.livingroomplus: "Hulu"
+      com.android.vending: "Google Play Store"
+      com.mlbam.wwe_asb_app: "WWE"
+      com.google.android.tvlauncher: "Android TV Guide"
+      com.nest.android: "Nest"
+      com.showtime.showtimeanytime: "Showtime"
+      com.nbcuni.nbc.androidtv: "NBC"
+      com.disney.datg.videoplatforms.android.abc: "ABC"
+      com.plexapp.android: "Plex"
+      com.sony.dtv.tvx: "Television"
+  - platform: androidtv
+    name: Living Room Android TV
+    device_class: androidtv
+    host: 192.168.163.247
+    adb_server_ip: 127.0.0.1
+    apps:
+      com.amazon.amazonvideo.livingroom:  "Amazon Prime Video"
+      com.google.android.youtube.tv:  "YouTube"
+      com.google.android.videos: "Google Play Movies"
+      com.neulion.smartphone.ufc.android: "UFC"
+      com.hulu.livingroomplus: "Hulu"
+      com.android.vending: "Google Play Store"
+      com.mlbam.wwe_asb_app: "WWE"
+      com.google.android.tvlauncher: "Android TV Guide"
+      com.nest.android: "Nest"
+      com.showtime.showtimeanytime: "Showtime"
+      com.nbcuni.nbc.androidtv: "NBC"
+      com.disney.datg.videoplatforms.android.abc: "ABC"
+      com.plexapp.android: "Plex"
+      com.sony.dtv.tvx: "Television"
+  - platform: soundtouch
+    host: 192.168.163.135
+    port: 8090
+    name: Bedroom Soundbar

@@ -1,0 +1,1546 @@
+livingroomtv_youtube:
+  alias: Launch Youtube on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: am start -a android.intent.action.VIEW -d -n com.google.android.youtube.tv/com.google.android.apps.youtube.tv.activity.ShellActivity
+livingroomtv_netflix:
+  alias: Launch Netflix on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: am start -a android.intent.action.VIEW -d -n com.netflix.ninja/.MainActivity
+livingroomtv_back:
+  alias: Back Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: BACK
+livingroomtv_blue:
+  alias: Blue Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: BLUE
+livingroomtv_center:
+  alias: Center Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: CENTER
+livingroomtv_down:
+  alias: Down Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: DOWN
+livingroomtv_end:
+  alias: End Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: END
+livingroomtv_enter:
+  alias: Enter Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: ENTER
+livingroomtv_green:
+  alias: green Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: GREEN
+livingroomtv_hdmi1:
+  alias: HDMI1 Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: HDMI1
+livingroomtv_hdmi2:
+  alias: HDMI2 Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: HDMI2
+livingroomtv_hdmi3:
+  alias: HDMI3 Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: HDMI3
+livingroomtv_hdmi4:
+  alias: HDMI4 Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: HDMI4
+livingroomtv_home:
+  alias: Home Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: HOME
+livingroomtv_input:
+  alias: Input Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: INPUT
+livingroomtv_left:
+  alias: Left Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: LEFT
+livingroomtv_menu:
+  alias: Menu Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: MENU
+livingroomtv_move_home:
+  alias: Move Home Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: MOVE_HOME
+livingroomtv_mute:
+  alias: Mute Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: MUTE
+livingroomtv_pairing:
+  alias: Pairing Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: PAIRING
+livingroomtv_power:
+  alias: Power Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: POWER
+livingroomtv_resume:
+  alias: Resume Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: RESUME
+livingroomtv_right:
+  alias: Right Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: RIGHT
+livingroomtv_sat:
+  alias: Sat Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: SAT
+livingroomtv_search:
+  alias: Search Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: SEARCH
+livingroomtv_settings:
+  alias: Settings Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: SETTINGS
+livingroomtv_sleep:
+  alias: Sleep Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: SLEEP
+livingroomtv_suspend:
+  alias: Suspend Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: SUSPEND
+livingroomtv_sys_down:
+  alias: Sys Down Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: SYSDOWN
+livingroomtv_sys_left:
+  alias: Sys Left Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: SYSLEFT
+livingroomtv_sys_right:
+  alias: Sys Right Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: SYSRIGHT
+livingroomtv_sys_up:
+  alias: Sys Up Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: SYSUP
+livingroomtv_text:
+  alias: Text Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: TEXT
+livingroomtv_top:
+  alias: Top Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: TOP
+livingroomtv_up:
+  alias: Up Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: UP
+livingroomtv_vga:
+  alias: VGA Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: VGA
+livingroomtv_volume_down:
+  alias: Volume Down Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: VOLUME_DOWN
+livingroomtv_volume_up:
+  alias: Volume Up Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: VOLUME_UP
+livingroomtv_yellow:
+  alias: Yellow Button on Living Room TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.living_room_android_tv
+      command: YELLOW
+bedroomtv_youtube:
+  alias: Launch Youtube on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: am start -a android.intent.action.VIEW -d -n com.google.android.youtube.tv/com.google.android.apps.youtube.tv.activity.ShellActivity
+bedroomtv_netflix:
+  alias: Launch Youtube on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: am start -a android.intent.action.VIEW -d -n com.google.android.youtube.tv/com.google.android.apps.youtube.tv.activity.ShellActivity
+bedroomtv_back:
+  alias: Back Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: BACK
+bedroomtv_blue:
+  alias: Blue Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: BLUE
+bedroomtv_center:
+  alias: Center Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: CENTER
+bedroomtv_down:
+  alias: Down Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: DOWN
+bedroomtv_end:
+  alias: End Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: END
+bedroomtv_enter:
+  alias: Enter Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: ENTER
+bedroomtv_green:
+  alias: green Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: GREEN
+bedroomtv_hdmi1:
+  alias: HDMI1 Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: HDMI1
+bedroomtv_hdmi2:
+  alias: HDMI2 Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: HDMI2
+bedroomtv_hdmi3:
+  alias: HDMI3 Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: HDMI3
+bedroomtv_hdmi4:
+  alias: HDMI4 Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: HDMI4
+bedroomtv_home:
+  alias: Home Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: HOME
+bedroomtv_input:
+  alias: Input Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: INPUT
+bedroomtv_left:
+  alias: Left Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: LEFT
+bedroomtv_menu:
+  alias: Menu Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: MENU
+bedroomtv_move_home:
+  alias: Move Home Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: MOVE_HOME
+bedroomtv_mute:
+  alias: Mute Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: MUTE
+bedroomtv_pairing:
+  alias: Pairing Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: PAIRING
+bedroomtv_power:
+  alias: Power Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: POWER
+bedroomtv_resume:
+  alias: Resume Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: RESUME
+bedroomtv_right:
+  alias: Right Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: RIGHT
+bedroomtv_sat:
+  alias: Sat Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: SAT
+bedroomtv_search:
+  alias: Search Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: SEARCH
+bedroomtv_settings:
+  alias: Settings Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: SETTINGS
+bedroomtv_sleep:
+  alias: Sleep Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: SLEEP
+bedroomtv_suspend:
+  alias: Suspend Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: SUSPEND
+bedroomtv_sys_down:
+  alias: Sys Down Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: SYSDOWN
+bedroomtv_sys_left:
+  alias: Sys Left Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: SYSLEFT
+bedroomtv_sys_right:
+  alias: Sys Right Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: SYSRIGHT
+bedroomtv_sys_up:
+  alias: Sys Up Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: SYSUP
+bedroomtv_text:
+  alias: Text Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: TEXT
+bedroomtv_top:
+  alias: Top Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: TOP
+bedroomtv_up:
+  alias: Up Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: UP
+bedroomtv_vga:
+  alias: VGA Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: VGA
+bedroomtv_volume_down:
+  alias: Volume Down Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: VOLUME_DOWN
+bedroomtv_volume_up:
+  alias: Volume Up Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: VOLUME_UP
+bedroomtv_yellow:
+  alias: Yellow Button on Bedroom TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.bedroom_android_tv
+      command: YELLOW
+alexastv_youtube:
+  alias: Launch Youtube on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: am start -a android.intent.action.VIEW -d -n com.google.android.youtube.tv/com.google.android.apps.youtube.tv.activity.ShellActivity
+alexastv_netflix:
+  alias: Launch Youtube on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: am start -a android.intent.action.VIEW -d -n com.google.android.youtube.tv/com.google.android.apps.youtube.tv.activity.ShellActivity
+alexastv_back:
+  alias: Back Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: BACK
+alexastv_blue:
+  alias: Blue Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: BLUE
+alexastv_center:
+  alias: Center Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: CENTER
+alexastv_down:
+  alias: Down Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: DOWN
+alexastv_end:
+  alias: End Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: END
+alexastv_enter:
+  alias: Enter Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: ENTER
+alexastv_green:
+  alias: green Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: GREEN
+alexastv_hdmi1:
+  alias: HDMI1 Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: HDMI1
+alexastv_hdmi2:
+  alias: HDMI2 Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: HDMI2
+alexastv_hdmi3:
+  alias: HDMI3 Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: HDMI3
+alexastv_hdmi4:
+  alias: HDMI4 Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: HDMI4
+alexastv_home:
+  alias: Home Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: HOME
+alexastv_input:
+  alias: Input Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: INPUT
+alexastv_left:
+  alias: Left Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: LEFT
+alexastv_menu:
+  alias: Menu Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: MENU
+alexastv_move_home:
+  alias: Move Home Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: MOVE_HOME
+alexastv_mute:
+  alias: Mute Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: MUTE
+alexastv_pairing:
+  alias: Pairing Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: PAIRING
+alexastv_power:
+  alias: Power Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: POWER
+alexastv_resume:
+  alias: Resume Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: RESUME
+alexastv_right:
+  alias: Right Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: RIGHT
+alexastv_sat:
+  alias: Sat Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: SAT
+alexastv_search:
+  alias: Search Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: SEARCH
+alexastv_settings:
+  alias: Settings Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: SETTINGS
+alexastv_sleep:
+  alias: Sleep Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: SLEEP
+alexastv_suspend:
+  alias: Suspend Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: SUSPEND
+alexastv_sys_down:
+  alias: Sys Down Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: SYSDOWN
+alexastv_sys_left:
+  alias: Sys Left Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: SYSLEFT
+alexastv_sys_right:
+  alias: Sys Right Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: SYSRIGHT
+alexastv_sys_up:
+  alias: Sys Up Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: SYSUP
+alexastv_text:
+  alias: Text Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: TEXT
+alexastv_top:
+  alias: Top Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: TOP
+alexastv_up:
+  alias: Up Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: UP
+alexastv_vga:
+  alias: VGA Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: VGA
+alexastv_volume_down:
+  alias: Volume Down Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: VOLUME_DOWN
+alexastv_volume_up:
+  alias: Volume Up Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: VOLUME_UP
+alexastv_yellow:
+  alias: Yellow Button on Alexas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.alexa_s_android_tv
+      command: YELLOW
+jackstv_youtube:
+  alias: Launch Youtube on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: am start -a android.intent.action.VIEW -d -n com.google.android.youtube.tv/com.google.android.apps.youtube.tv.activity.ShellActivity
+jackstv_netflix:
+  alias: Launch Youtube on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: am start -a android.intent.action.VIEW -d -n com.google.android.youtube.tv/com.google.android.apps.youtube.tv.activity.ShellActivity
+jackstv_back:
+  alias: Back Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: BACK
+jackstv_blue:
+  alias: Blue Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: BLUE
+jackstv_center:
+  alias: Center Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: CENTER
+jackstv_down:
+  alias: Down Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: DOWN
+jackstv_end:
+  alias: End Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: END
+jackstv_enter:
+  alias: Enter Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: ENTER
+jackstv_green:
+  alias: green Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: GREEN
+jackstv_hdmi1:
+  alias: HDMI1 Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: HDMI1
+jackstv_hdmi2:
+  alias: HDMI2 Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: HDMI2
+jackstv_hdmi3:
+  alias: HDMI3 Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: HDMI3
+jackstv_hdmi4:
+  alias: HDMI4 Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: HDMI4
+jackstv_home:
+  alias: Home Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: HOME
+jackstv_input:
+  alias: Input Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: INPUT
+jackstv_left:
+  alias: Left Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: LEFT
+jackstv_menu:
+  alias: Menu Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: MENU
+jackstv_move_home:
+  alias: Move Home Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: MOVE_HOME
+jackstv_mute:
+  alias: Mute Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: MUTE
+jackstv_pairing:
+  alias: Pairing Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: PAIRING
+jackstv_power:
+  alias: Power Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: POWER
+jackstv_resume:
+  alias: Resume Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: RESUME
+jackstv_right:
+  alias: Right Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: RIGHT
+jackstv_sat:
+  alias: Sat Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: SAT
+jackstv_search:
+  alias: Search Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: SEARCH
+jackstv_settings:
+  alias: Settings Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: SETTINGS
+jackstv_sleep:
+  alias: Sleep Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: SLEEP
+jackstv_suspend:
+  alias: Suspend Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: SUSPEND
+jackstv_sys_down:
+  alias: Sys Down Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: SYSDOWN
+jackstv_sys_left:
+  alias: Sys Left Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: SYSLEFT
+jackstv_sys_right:
+  alias: Sys Right Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: SYSRIGHT
+jackstv_sys_up:
+  alias: Sys Up Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: SYSUP
+jackstv_text:
+  alias: Text Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: TEXT
+jackstv_top:
+  alias: Top Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: TOP
+jackstv_up:
+  alias: Up Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: UP
+jackstv_vga:
+  alias: VGA Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: VGA
+jackstv_volume_down:
+  alias: Volume Down Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: VOLUME_DOWN
+jackstv_volume_up:
+  alias: Volume Up Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: VOLUME_UP
+jackstv_yellow:
+  alias: Yellow Button on jacks TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.jack_s_android_tv
+      command: YELLOW
+ellastv_youtube:
+  alias: Launch Youtube on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: am start -a android.intent.action.VIEW -d -n com.google.android.youtube.tv/com.google.android.apps.youtube.tv.activity.ShellActivity
+ellastv_netflix:
+  alias: Launch Youtube on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: am start -a android.intent.action.VIEW -d -n com.google.android.youtube.tv/com.google.android.apps.youtube.tv.activity.ShellActivity
+ellastv_back:
+  alias: Back Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: BACK
+ellastv_blue:
+  alias: Blue Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: BLUE
+ellastv_center:
+  alias: Center Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: CENTER
+ellastv_down:
+  alias: Down Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: DOWN
+ellastv_end:
+  alias: End Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: END
+ellastv_enter:
+  alias: Enter Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: ENTER
+ellastv_green:
+  alias: green Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: GREEN
+ellastv_hdmi1:
+  alias: HDMI1 Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: HDMI1
+ellastv_hdmi2:
+  alias: HDMI2 Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: HDMI2
+ellastv_hdmi3:
+  alias: HDMI3 Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: HDMI3
+ellastv_hdmi4:
+  alias: HDMI4 Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: HDMI4
+ellastv_home:
+  alias: Home Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: HOME
+ellastv_input:
+  alias: Input Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: INPUT
+ellastv_left:
+  alias: Left Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: LEFT
+ellastv_menu:
+  alias: Menu Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: MENU
+ellastv_move_home:
+  alias: Move Home Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: MOVE_HOME
+ellastv_mute:
+  alias: Mute Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: MUTE
+ellastv_pairing:
+  alias: Pairing Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: PAIRING
+ellastv_power:
+  alias: Power Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: POWER
+ellastv_resume:
+  alias: Resume Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: RESUME
+ellastv_right:
+  alias: Right Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: RIGHT
+ellastv_sat:
+  alias: Sat Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: SAT
+ellastv_search:
+  alias: Search Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: SEARCH
+ellastv_settings:
+  alias: Settings Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: SETTINGS
+ellastv_sleep:
+  alias: Sleep Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: SLEEP
+ellastv_suspend:
+  alias: Suspend Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: SUSPEND
+ellastv_sys_down:
+  alias: Sys Down Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: SYSDOWN
+ellastv_sys_left:
+  alias: Sys Left Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: SYSLEFT
+ellastv_sys_right:
+  alias: Sys Right Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: SYSRIGHT
+ellastv_sys_up:
+  alias: Sys Up Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: SYSUP
+ellastv_text:
+  alias: Text Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: TEXT
+ellastv_top:
+  alias: Top Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: TOP
+ellastv_up:
+  alias: Up Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: UP
+ellastv_vga:
+  alias: VGA Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: VGA
+ellastv_volume_down:
+  alias: Volume Down Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: VOLUME_DOWN
+ellastv_volume_up:
+  alias: Volume Up Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: VOLUME_UP
+ellastv_yellow:
+  alias: Yellow Button on ellas TV
+  sequence:
+    service: androidtv.adb_command
+    data:
+      entity_id: media_player.ella_s_android_tv
+      command: YELLOW
+watch_tv:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.living_room
+    data:
+      activity: '36772533'
+play_ps4:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.living_room
+    data:
+      activity: '36772669'
+shield_tv:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.living_room
+    data:
+      activity: '36772743'
+watch_netflix:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.living_room
+    data:
+      activity: '36772816'
+watch_smart_tv:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.living_room
+    data:
+      activity: '36772873'
+twilight:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.living_room
+    data:
+      activity: '39034534'
+eclipse:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.living_room
+    data:
+      activity: '39097256'
+new_moon:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.living_room
+    data:
+      activity: '39097370'
+breaking_dawn_part_1:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.living_room
+    data:
+      activity: '39099037'
+breaking_dawn_part_2:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.living_room
+    data:
+      activity: '39099181'
+hunger_games:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.living_room
+    data:
+      activity: '39105317'
+catching_fire:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.living_room
+    data:
+      activity: '39105329'
+mockingjay_part_1:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.living_room
+    data:
+      activity: '39105333'
+mockingjay_part_2:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.living_room
+    data:
+      activity: '39105340'
+the_notebook:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.living_room
+    data:
+      activity: '39105600'
+tvoff:
+  sequence:
+  - service: remote.turn_off
+    entity_id: remote.living_room
+livingroomtv_fix_audio:
+  alias: Fix Audio
+  sequence:
+  - data:
+      source: TV
+    entity_id: media_player.living_room_soundbar
+    service: media_player.select_source
+bedroom_twilight:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.bedroom
+    data:
+      activity: '41946370'
+bedroom_eclipse:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.bedroom
+    data:
+      activity: '41947862'
+bedroom_new_moon:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.bedroom
+    data:
+      activity: '41946657'
+bedroom_breaking_dawn_part_1:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.bedroom
+    data:
+      activity: '41948942'
+bedroom_breaking_dawn_part_2:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.bedroom
+    data:
+      activity: '41949078'
+bedroom_hunger_games:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.bedroom
+    data:
+      actvity: '41949241'
+bedroom_catching_fire:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.bedroom
+    data:
+      activity: '4194937'
+bedroom_mockingjay_part_1:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.bedroom
+    data:
+      activity: '41949661'
+bedroom_mockingjay_part_2:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.bedroom
+    data:
+      activity: '41949852'
+bedroom_the_notebook:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.bedroom
+    data:
+      activity: '41949944'
+bedroom_watch_netflix:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.bedroom
+    data:
+      activity: '41946274'
+bedroom_watch_smart_tv:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.bedroom
+    data:
+      activity: '41946271'
+'1594319465459':
+  alias: Airheads on Bedroom
+  sequence:
+  - data:
+      entity_id: media_player.plex_for_bedroom
+      media_content_id: '{ "library_name": "Movies", "video_name": "Airheads" }'
+      media_content_type: VIDEO
+    service: media_player.play_media

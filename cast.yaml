@@ -1,0 +1,31 @@
+  media_player:
+  - host: 192.168.163.137
+    name: Jack's TV
+  - host: 192.168.163.160
+    name: Alexa's TV
+  - host: 192.168.163.193
+    name: Ella's TV
+  - host: 192.168.163.134
+    name: Bedroom TV
+  - host: 192.168.163.247
+    name: Living Room TV
+  - host: 192.168.163.38
+    name: Alexa's Home
+  - host: 192.168.163.139
+    name: Bathroom Home
+  - host: 192.168.163.142
+    name: Ella's Home
+  - host: 192.168.163.62
+    name: Jack's Home
+  - host: 192.168.163.152
+    name: Breakfast Area Home
+  - host: 192.168.163.212
+    name: Living Room Home
+  - host: 192.168.163.138
+    name: Living Room Soundbar
+  - host: 192.168.163.158
+    name: Bedroom Hub
+  - host: 192.168.163.106
+    name: Kitchen Hub
+  - host: 192.168.163.152
+    name: Playroom Home

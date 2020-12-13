@@ -1,0 +1,74 @@
+  nikiya_status_dropdown:
+    name: Nikiya
+    options:
+      - Home
+      - Just Arrived
+      - Just Left
+      - Away
+      - Extended Away
+    initial: Home
+  amanda_status_dropdown: 
+    name: Amanda
+    options:
+      - Home
+      - Just Arrived 
+      - Just Left
+      - Away
+      - Extended Away
+    initial: Home
+  jack_status_dropdown:
+    name: Jack
+    options:
+      - Home
+      - Just Arrived
+      - Just Left
+      - Away
+      - Extended Away
+    initial: Home
+  alexa_status_dropdown:
+    name: Alexa
+    options:
+      - Home
+      - Just Arrived
+      - Just Left
+      - Away
+      - Extended Away 
+    initial: Home
+  mandy_status_dropdown: 
+    name: Mandy
+    options:
+      - Home
+      - Just Arrived
+      - Just Left
+      - Away
+      - Extended Away
+    initial: Home
+  steve_status_dropdown:
+    name: Steve
+    options:
+      - Home
+      - Just Arrived
+      - Just Left
+      - Away
+      - Extended Away
+    initial: Home
+  living_room_tv:
+    name: Living Room TV
+    options:
+      - Powered Off
+      - Watch TV
+      - Play PS4
+      - SHIELD TV
+      - Watch Netflix
+      - Watch Smart TV
+      - Twilight
+    initial: Powered Off
+    icon: mdi:monitor
+
+  destination:
+    name: destination
+    options:
+      - Home
+      - Ara
+      - NY
+    initial: Home

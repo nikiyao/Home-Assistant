@@ -1,0 +1,21 @@
+
+- cal_id: family05841734717263079729@group.calendar.google.com
+  entities:
+  - device_id: family
+    ignore_availability: true
+    name: Family
+    track: true
+
+- cal_id: en.usa#holiday@group.v.calendar.google.com
+  entities:
+  - device_id: holidays_in_united_states
+    ignore_availability: true
+    name: Holidays in United States
+    track: true
+
+- cal_id: osborn.nikiya@gmail.com
+  entities:
+  - device_id: osborn_nikiya_gmail_com
+    ignore_availability: true
+    name: osborn.nikiya@gmail.com
+    track: true
