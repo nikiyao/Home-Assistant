@@ -4,13 +4,13 @@
     entity_id: switch.ella_s_bedroom_light
   - platform: switch
     name: Kitchen Light
-    entity_id: switch.kitchen_light
+    entity_id: switch.kitchen_lights
   - platform: switch
     name: Kitchen Sink Light
     entity_id: switch.kitchen_sink_light
   - platform: switch
     name: Living Room Light
-    entity_id: switch.living_room_light
+    entity_id: switch.living_room_lights
   - platform: switch
     name: Jack's Bedroom Light
     entity_id: switch.jack_s_bedroom_light

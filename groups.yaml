@@ -1,43 +1,29 @@
-  All Android Televisions:
+
+  climate:
+    name: Thermostats
     entities:
-      - media_player.alexa_s_android_tv
-      - media_player.bedroom_android_tv
-      - media_player.ella_s_android_tv
-      - media_player.jack_s_android_tv
-      - media_player.living_room_android_tv
-  All Google Home:
+      - climate.bedroom
+      - climate.living_room
+  cover:
+    name: Cover
     entities:
-      - media_player.alexa_s_room_speaker
-      - media_player.bathroom_speaker
-      - media_player.bedroom_display
-      - media_player.ella_s_room_speaker
-      - media_player.jack_s_room_speaker
-      - media_player.kitchen_home
-      - media_player.living_room_home
-      - media_player.playroom_speaker
-  House Lights:
-    icon: mdi:lightbulb
+      - cover.center_garage
+      - cover.left_garage
+      - cover.right_garage
+  device_tracker:
+    name: Family
     entities:
-      - light.bedtime_lights
-      - light.outside_lights
-      - light.entrance_lights
-      - light.downstairs_lights
-      - light.upstairs_lights
-      - light.upstairs_hallway_main_lights
-      - light.front_foyer_chandelier
-      - light.kitchen_lights
-      - light.breakfast_area_chandelier
-      - light.downstairs_bathroom_lights
-      - light.living_room_lights
-      - light.playroom_main_lights
-      - light.bedroom_lights
-      - light.amanda_s_lamp
-      - light.master_bedroom_closet_main_lights
-      - light.bathroom_lights
-      - light.alexa_s_bedroom_lights
-      - light.jack_s_bedroom_lights
-      - light.ella_s_bedroom_main_lights
-      - light.upstairs_bathroom_lights
-      - light.laundry_room_main_lights
-      - light.garage_main_lights
-      - light.basement_stairs_main_lights
+      - device_tracker.alexa_iphone
+      - device_tracker.alexaip
+      - device_tracker.amanda_iphone
+      - device_tracker.amanda_iphone_lan
+      - device_tracker.amandaip
+      - device_tracker.google_maps_103680416713375571882
+      - device_tracker.google_maps_oskamefamily_gmail_com
+      - device_tracker.jackip
+      - device_tracker.jacks_iphone_2
+      - device_tracker.jacks_iphone_lan
+      - device_tracker.nikiya_galaxy_note20
+      - device_tracker.nikiyas_galaxy_note20_lan
+      - device_tracker.nikiyas_note_ultra_lan
+  
