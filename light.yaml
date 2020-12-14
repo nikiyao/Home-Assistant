@@ -1,109 +1,84 @@
 ###########Light Switches###########
   - platform: switch
-    name:  Alexa's Bedroom Lights
-    entity_id: switch.alexa_s_bedroom_main_lights
+    name:  Ella's Bedroom Light
+    entity_id: switch.ella_s_bedroom_light
   - platform: switch
-    name: Kitchen Main Lights
-    entity_id: switch.kitchen_main_lights
+    name: Kitchen Light
+    entity_id: switch.kitchen_light
   - platform: switch
     name: Kitchen Sink Light
     entity_id: switch.kitchen_sink_light
   - platform: switch
-    name: Living Room Ceiling Fan
-    entity_id: switch.living_room_ceiling_fan
+    name: Living Room Light
+    entity_id: switch.living_room_light
   - platform: switch
-    name: Bedroom Ceiling Fan
-    entity_id: switch.master_bedroom_ceiling_fan
-  - platform: switch
-    name: Living Room Main Lights
-    entity_id: switch.living_room_main_lights
-  - platform: switch
-    name: Jack's Bedroom Lights
-    entity_id: switch.jack_s_bedroom_main_lights
+    name: Jack's Bedroom Light
+    entity_id: switch.jack_s_bedroom_light
 
   ######Light Groups####
 
   - platform: group 
     name: Downstairs Lights
     entities:
-      - light.kitchen_island_pendants
-      - light.living_room_accent_lights
-      - light.living_room_lights
-      - light.living_room_ceiling_fan_light
-      - light.breakfast_area_chandelier
-      - light.downstairs_hallway_main_lights
-      - light.kitchen_lights
-      - light.kitchen_sink_light
-      - light.playroom_main_lights
-  - platform: group
-    name: Entrance Lights
-    entities:
-      - light.exterior_driveway_light
+      - light.breakfast_area_chandler
       - light.front_foyer_chandelier
+      - light.kitchen_island_pendants
+      - light.kitchen_light
+      - light.kitchen_sink_light
+      - light.living_room_accent_lights
+      - light.living_room_ceiling_fan_light
+      - light.living_room_light
+      - light.playroom_light
+  - platform: group
+    name: Porch Lights
+    entities:
       - light.front_porch_overhead_light
       - light.front_porch_sconces
   - platform: group
     name: Living Room Lights
     entities:
-      - light.living_room_main_lights
-      - light.living_room_accent_lights
+      - light.living_room_light
       - light.living_room_ceiling_fan_light
+      - light.living_room_accent_lights
   - platform: group
     name: Jacks Color Lights
     entities:
-      - light.jack_sroom
-      - light.jack_sroom_2
-      - light.jack_sroom_3
-  - platform: group
-    name: Alexa's Color Lights
-    entities:
-      - light.alexa_s_room
-      - light.alexa_s_room_2
-      - light.alexa_s_room_3
+      - light.jack_s_room_color
+      - light.jack_s_room_color_2
+      - light.jack_s_room_color_3
   - platform: group
     name: Bedroom Lights
     entities:
-      - light.master_bedroom_closet_main_lights
-      - light.master_bedroom_ceiling_fan_light
-      - light.master_bedroom_accent_lights
+      - light.bedroom_light
+      - light.bedroom_hallway_light
   - platform: group
     name: Upstairs Lights
     entities:
-      - light.alexa_s_bedroom_lights
-      - light.ella_s_bedroom_main_lights
-      - light.front_foyer_chandelier
-      - light.jack_s_bedroom_lights
-      - light.laundry_room_main_lights
-      - light.upstairs_hallway_main_lights
-      - light.master_bathroom_ceiling_fan_light
-      - light.master_bathroom_main_lights
-      - light.master_bathroom_shower
-      - light.master_bathroom_toilet
-      - light.master_bathroom_vanity_lights
-      - light.master_bedroom_accent_lights
-      - light.master_bedroom_ceiling_fan_light
-      - light.master_bedroom_closet_main_lights
+      - light.ella_s_room
+      - light.jack_s_bedroom_light
+      - light.alexa_s_bedroom_light
+      - light.upstairs_hallway_lights
+      - light.bedroom_lights
   - platform: group
     name: Outside Lights
     entities:
-      - light.backdoor_sconces
-      - light.exterior_driveway_light
+      - light.deck_lights_1
+      - light.deck_lights_2
+      - light.driveway_lights
       - light.front_porch_overhead_light
       - light.front_porch_sconces
-      - light.deck_deck_lights_1
-      - light.deck_deck_lights_2
+      - light.backdoor_sconces
   - platform: group
     name: Bathroom Lights
     entities:
-      - light.master_bathroom_ceiling_fan_light
-      - light.master_bathroom_main_lights
-      - light.master_bathroom_shower
-      - light.master_bathroom_toilet
-      - light.master_bathroom_vanity_lights
+      - light.bathroom_ceiling_fan_light
+      - light.bathroom_shower_light
+      - light.bathroom_toilet_light
+      - light.bathroom_vanity_lights
   - platform: group
     name: Upstairs Bathroom Lights
     entities:
-      - light.upstairs_bathroom_shower_lights
+      - light.upstairs_bathroom_shower_light
       - light.upstairs_bathroom_vanity_lights
   - platform: group
     name: Downstairs Bathroom Lights
@@ -114,28 +89,20 @@
     name: Kitchen Lights
     entities:
       - light.kitchen_island_pendants
-      - light.kitchen_main_lights
       - light.kitchen_sink_light
+      - light.kitchen_main_lights
   - platform: group
     name: Bedtime Lights
     entities:
-      - light.kitchen_island_pendants
-      - light.living_room_accent_lights
-      - light.living_room_lights
-      - light.living_room_ceiling_fan_light
-      - light.breakfast_area_chandelier
-      - light.downstairs_hallway_main_lights
-      - light.kitchen_lights
-      - light.kitchen_sink_light
-      - light.playroom_main_lights
-      - light.front_foyer_chandelier
-      - light.downstairs_bathroom_ceiling_fan_light
-      - light.downstairs_bathroom_vanity_lights
-      - light.basement_stairs_main_lights
-      - light.laundry_room_main_lights
-      - light.upstairs_hallway_main_lights
-      - light.master_bathroom_ceiling_fan_light
-      - light.upstairs_bathroom_shower_light
-      - light.deck_deck_lights_1
-      - light.deck_deck_lights_2
+      - light.downstairs_lights
+      - light.basement_lights
       - light.backdoor_sconces
+      - light.bathroom_lights
+      - light.bedroom_closet_light
+      - light.downstairs_bathroom_lights
+      - light.upstairs_bathroom_lights
+      - light.upstairs_hallway_lights
+      - light.ella_s_room
+      - light.jack_s_bedroom_lights
+      - light.alexa_s_bedroom_light
+      - light.garage_main_lights
